@@ -129,16 +129,18 @@
           <h2 class="our-team-title">Our Team</h2>
           <ul class="our-team-list">
             <li class="our-team-item">
-              <img
-                class="our-team-img"
-                srcset="
-                  ./images/img1.jpg                    1x,
-                  ./images/our-team/img1@2x-result.jpg 2x
-                "
-                src="./images/img1.jpg"
-                width="264"
-                alt="Team Member 1"
-              />
+              <picture>
+                <img
+                  class="our-team-img"
+                  srcset="
+                    ./images/img1.jpg                    1x,
+                    ./images/our-team/img1@2x_result.jpg 2x
+                  "
+                  src="./images/img1.jpg"
+                  width="264"
+                  alt="Team Member 1"
+                />
+              </picture>
               <div class="our-team-information">
                 <h3 class="our-team-subtitle">Mark Guerrero</h3>
                 <p class="our-team-text">Product Designer</p>
@@ -175,7 +177,18 @@
               </div>
             </li>
             <li class="our-team-item">
-              <img src="./images/img2.jpg" width="264" alt="Team Member 2" />
+              <picture>
+                <img
+                  class="our-team-img"
+                  srcset="
+                    ./images/img2.jpg                    1x,
+                    ./images/our-team/img2@2x_result.jpg 2x
+                  "
+                  src="./images/img2.jpg"
+                  width="264"
+                  alt="Team Member 2"
+                />
+              </picture>
               <div class="our-team-information">
                 <h3 class="our-team-subtitle">Tom Ford</h3>
                 <p class="our-team-text">Frontend Developer</p>
@@ -212,7 +225,18 @@
               </div>
             </li>
             <li class="our-team-item">
-              <img src="./images/img3.jpg" width="264" alt="Team Member 3" />
+              <picture>
+                <img
+                  class="our-team-img"
+                  srcset="
+                    ./images/img3.jpg                    1x,
+                    ./images/our-team/img3@2x_result.jpg 2x
+                  "
+                  src="./images/img3.jpg"
+                  width="264"
+                  alt="Team Member 3"
+                />
+              </picture>
               <div class="our-team-information">
                 <h3 class="our-team-subtitle">Camila Garcia</h3>
                 <p class="our-team-text">Marketing</p>
@@ -249,7 +273,18 @@
               </div>
             </li>
             <li class="our-team-item">
-              <img src="./images/img4.jpg" width="264" alt="Team Member 4" />
+              <picture>
+                <img
+                  class="our-team-img"
+                  srcset="
+                    ./images/img4.jpg                    1x,
+                    ./images/our-team/img4@2x_result.jpg 2x
+                  "
+                  src="./images/img4.jpg"
+                  width="264"
+                  alt="Team Member 4"
+                />
+              </picture>
               <div class="our-team-information">
                 <h3 class="our-team-subtitle">Daniel Wilson</h3>
                 <p class="our-team-text">UI Designer</p>
@@ -295,12 +330,17 @@
           <ul class="our-portfolio-list">
             <li class="our-portfolio-item">
               <div class="overlay-wrapper">
-                <img
-                  src="./images/images/img1.jpg"
-                  width="360"
-                  height="300"
-                  alt="Banking App"
-                />
+                <picture>
+                  <!-- Mobile screen -->
+                  <source
+                    media="(max-width: 767px)"
+                    <img
+                    src="./images/images/img1.jpg"
+                    width="360"
+                    height="300"
+                    alt="Banking App"
+                  />
+                </picture>
                 <p class="overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
