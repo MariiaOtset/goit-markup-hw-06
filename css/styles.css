@@ -51,6 +51,14 @@ section
         padding-bottom: 120px;
     }
 }
+h2 {
+    color: var(--NAVY-BLUE, #2E2F42);
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
 
 .visually-hidden {
     position: absolute;
@@ -270,25 +278,79 @@ p {
 /* Section 2 */
 .features-list {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 72px;
+    flex-wrap: wrap;
 }
-.features-item {
-width: calc( (100% - 72px) / 4);
+@media screen and (min-width: 768px) {
+.features-list {
+        flex-direction: row;
+        row-gap: 72px;
+        column-gap: 24px;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .features-list {
+       gap: 24px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .features-item {
+width: calc((100% - 24px) / 2);
+    }
+}
+@media screen and (min-width: 1158px) {
+    .features-item {
+        width: calc((100% - 72px) / 4);
+    }
 }
 .features-subtitle {
     margin-bottom: 8px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--NAVY-BLUE, #2E2F42);
+        text-align: center;
+        font-size: 36px;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+}
+@media screen and (min-width: 768px) {
+ .features-subtitle { 
+    text-align: left;
+ }
+}
+
+@media screen and (min-width: 1158px) {
+.features-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: none; 
+}
 }
 .features-wrapper {
-width: 264px;
-height: 112px;
-flex-shrink: 0;
-border-radius: 4px;
-border: 1px solid var(--LIGHT-SLATE, #8E8F99);
-background: var(--CLOUD, #F4F4FD);
-display: flex;
-justify-content:center;
-align-items: center;
-margin-bottom: 8px;
+    display: none;
+}
+@media screen and (min-width: 1158px) {
+.features-wrapper {
+        width: 264px;
+        height: 112px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        border: 1px solid var(--LIGHT-SLATE, #8E8F99);
+        background: var(--CLOUD, #F4F4FD);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+}
+.features-text {
+    font-weight: 500;
+}
+@media screen and (min-width: 1158px) {
+.features-text {
+        font-weight: 400;
+    }
 }
 
 /* Section 3 */
@@ -325,14 +387,6 @@ margin-bottom: 8px;
 .our-team-text {
     font-size: 16px;
     text-align: center;
-}
-h2 {
-    color: var(--NAVY-BLUE, #2E2F42);
-        text-align: center;
-        font-size: 36px;
-        line-height: 1.11;
-        letter-spacing: 0.02em;
-        text-transform: capitalize;
 }
 .our-team-title {
     display: flex;
