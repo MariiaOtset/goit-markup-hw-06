@@ -209,27 +209,64 @@ address {
 /* Main */
 /* Section 1 */
 .hero {
-    max-width: 1440px;
+    padding: 72px 16px;
     margin: 0 auto;
     background-position: center;
     background-color: var(--NAVY-BLUE, #2E2F42);
-    height: 600px;
-    flex-shrink: 0;
-    padding: 188px 0;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-background.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/background-images/mobile-people-office_result.jpg');
    background-repeat: no-repeat;
    background-size: cover;
 } 
+
+@media only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url('../images/background-images/mobile-people-office@2x_result.jpg');
+    }
+}
+@media only screen and (min-width: 768px) {
+    .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url('../images/background-images/tablet-people-office_result.jpg');
+}
+}
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url('../images/background-images/tablet-people-office@2x_result.jpg');
+        }
+}
+@media only screen and (min-width: 1158px) {
+    .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url('../images/people-office-background.jpg');
+                max-width: 1440px;
+                padding: 188px 0;
+                height: 600px;
+        }
+}
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+    .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url('../images/background-images/desktop-people-office@2x_result.jpg');
+}
+}
 .hero-heading {
-    max-width: 496px;
+    max-width: 288px;
+    margin-bottom: 72px;
     color: var(--WHITE, #FFF);
     text-align: center;
         font-size: 36px;
         line-height: 1.11;
         letter-spacing: 0.02em;
         text-transform: capitalize;
-    /*
-    color: var(--WHITE, #FFF); 
+}
+@media only screen and (min-width: 768px) {
+    .hero-heading {
+        max-width: 496px;
+    }
+}
+    /* 
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 1.12px;
@@ -240,7 +277,7 @@ address {
     text-align: center;
     margin-left: auto;
     margin-right: auto; */
-}
+
 .hero-button {
     cursor: pointer;
     background: var(--IRIS, #4D5AE5);
