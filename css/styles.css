@@ -219,7 +219,7 @@ address {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-background.jpg);
    background-repeat: no-repeat;
    background-size: cover;
-}
+} 
 .hero-heading {
     max-width: 496px;
     color: var(--WHITE, #FFF);

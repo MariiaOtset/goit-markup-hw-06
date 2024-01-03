@@ -60,7 +60,7 @@
     <!-- Content -->
     <main>
       <!--Section1-->
-      <section class="hero hide">
+      <section class="hero">
         <div class="container">
           <h1 class="hero-heading">Effective Solutions for Your Business</h1>
           <button class="hero-button" type="button">Order Service</button>
@@ -129,7 +129,16 @@
           <h2 class="our-team-title">Our Team</h2>
           <ul class="our-team-list">
             <li class="our-team-item">
-              <img src="./images/img1.jpg" width="264" alt="Team Member 1" />
+              <img
+                class="our-team-img"
+                srcset="
+                  ./images/img1.jpg                    1x,
+                  ./images/our-team/img1@2x-result.jpg 2x
+                "
+                src="./images/img1.jpg"
+                width="264"
+                alt="Team Member 1"
+              />
               <div class="our-team-information">
                 <h3 class="our-team-subtitle">Mark Guerrero</h3>
                 <p class="our-team-text">Product Designer</p>
