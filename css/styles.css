@@ -215,7 +215,12 @@ address {
     gap: 12px;
 }
 }
-
+@media only screen and (min-width: 1158px) {
+   .contact-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
 .contact-list:last-child {
     margin-right: 0;
 }
