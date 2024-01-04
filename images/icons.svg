@@ -1,5 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <defs>
+        <symbol id="icon-menu-x" width="8" height="8" viewBox="0 0 8 8" fill="none">
+            <g clip-path="url(#clip0_655119_1211)">
+                <path
+                    d="M8 0.805714L7.19429 0L4 3.19429L0.805714 0L0 0.805714L3.19429 4L0 7.19429L0.805714 8L4 4.80571L7.19429 8L8 7.19429L4.80571 4L8 0.805714Z"
+                    fill="#2E2F42" />
+            </g>
+            <defs>
+                <clipPath id="clip0_655119_1211">
+                    <rect width="8" height="8" fill="white" />
+                </clipPath>
+            </defs>
+        </symbol>
         <symbol id="icon-burger" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M3.59961 6.00078C3.59961 5.68252 3.72604 5.3773 3.95108 5.15225C4.17612 4.92721 4.48135 4.80078 4.79961 4.80078H19.1996C19.5179 4.80078 19.8231 4.92721 20.0481 5.15225C20.2732 5.3773 20.3996 5.68252 20.3996 6.00078C20.3996 6.31904 20.2732 6.62427 20.0481 6.84931C19.8231 7.07435 19.5179 7.20078 19.1996 7.20078H4.79961C4.48135 7.20078 4.17612 7.07435 3.95108 6.84931C3.72604 6.62427 3.59961 6.31904 3.59961 6.00078Z"
