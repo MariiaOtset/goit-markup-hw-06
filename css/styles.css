@@ -826,7 +826,7 @@ p {
 .backdrop.is-open {
   opacity: 1;
   visibility: visible;
-  pointer-events: none;
+  pointer-events: all;
 }
 .modal {
   position: absolute;

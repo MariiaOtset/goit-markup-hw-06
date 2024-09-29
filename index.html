@@ -32,6 +32,7 @@
             class="menu-button"
             type="button"
             aria-label="Open menu button"
+            id="burgerBtn"
           >
             <svg class="menu-btn-icon" width="24" height="24">
               <use href="./images/icons.svg#icon-burger"></use>
@@ -72,9 +73,9 @@
       <section class="hero">
         <div class="container hero-container">
           <h1 class="hero-heading">Effective Solutions for Your Business</h1>
-          <a href="#contacts"
-            ><button class="hero-button" type="button">Order Service</button></a
-          >
+          <button class="hero-button" type="button" id="orderServiceBtn">
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -691,12 +692,13 @@
     </footer>
     <!--Modal window-->
 
-    <div class="backdrop (is-open) hide">
+    <div class="backdrop hide" id="modalWindow">
       <div class="modal">
         <button
           class="modal-button"
           type="button"
           aria-label="Modal close button"
+          id="closeForm"
         >
           <svg class="modal-button-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
@@ -779,13 +781,15 @@
               </span>
             </label>
           </div>
-          <button class="modal-form-button" type="submit">Send</button>
+          <button class="modal-form-button" type="submit" id="submitBtn">
+            Send
+          </button>
         </form>
       </div>
     </div>
     <!-- Mobile menu-->
-    <div class="mobile-menu">
-      <button type="button" class="mobile-menu-btn">
+    <div class="mobile-menu" id="mobileMenu">
+      <button type="button" class="mobile-menu-btn" id="mobileMenuClose">
         <svg class="mobile-menu-btn-icon" width="8" height="8">
           <use href="./images/icons.svg#icon-menu-x"></use>
         </svg>
@@ -844,5 +848,6 @@
         </li>
       </ul>
     </div>
+    <script src="./js/practice.js"></script>
   </body>
 </html>
