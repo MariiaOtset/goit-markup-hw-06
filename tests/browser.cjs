@@ -11,7 +11,7 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
     args: ["--no-sandbox", "--disable-dev-shm-usage"]
   });
   try {
-    for (const width of [320, 375, 430, 768, 1024, 1440]) {
+    for (const width of [320, 360, 375, 390, 430, 490, 760, 768, 1024, 1440]) {
       const page = await browser.newPage();
       const errors = [];
       page.on("pageerror", err => errors.push(err.message));
@@ -24,6 +24,20 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
       }));
       assert.ok(dimensions.content <= dimensions.screen + 2, width + "px: horizontal overflow: " + JSON.stringify(dimensions));
       assert.equal(errors.length, 0, width + "px page errors: " + errors.join(" | "));
+      // Check the content itself, not just scrollWidth (overflow:clip can mask a broken layout).
+      const outOfBounds = await page.evaluate(() => {
+        const selectors = [
+          ".header-inner", ".hero-copy", ".hero h1", ".hero-art", ".principles-layout",
+          ".principle", ".service-card", ".filter-buttons", ".filter",
+          ".project-card", ".project-info", ".process-list", ".value-grid",
+          ".faq-grid", ".contact-layout", ".footer-upper"
+        ];
+        return selectors.flatMap(selector => [...document.querySelectorAll(selector)]
+          .filter(el => el.getClientRects().length && getComputedStyle(el).display !== "none")
+          .map(el => ({ selector, left: el.getBoundingClientRect().left, right: el.getBoundingClientRect().right }))
+          .filter(box => box.left < -2 || box.right > window.innerWidth + 2));
+      });
+      assert.deepEqual(outOfBounds, [], width + "px: clipped content elements");
       if (width === 390 || width === 375) {
         await page.click("#menu-toggle");
         assert.equal(await page.$eval("#menu-toggle", el => el.getAttribute("aria-expanded")), "true");
