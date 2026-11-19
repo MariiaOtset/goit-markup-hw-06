@@ -1,0 +1,23 @@
+name: WebStudio static quality checks
+
+on:
+  push:
+    branches: [main, feat/webstudio-premium-redesign]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate JavaScript syntax
+        run: node --check js/site.js
+      - name: Verify local assets and page features
+        run: node --test tests/site.test.mjs
