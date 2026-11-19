@@ -2,7 +2,7 @@ name: WebStudio static quality checks
 
 on:
   push:
-    branches: [main, feat/webstudio-premium-redesign]
+    branches: [main, feat/webstudio-premium-redesign, test/webstudio-browser-smoke]
   pull_request:
     branches: [main]
 
@@ -21,3 +21,20 @@ jobs:
         run: node --check js/site.js
       - name: Verify local assets and page features
         run: node --test tests/site.test.mjs
+
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser test harness without changing project dependencies
+        run: npm install --prefix /tmp/webstudio-qa --no-save --no-package-lock --ignore-scripts puppeteer-core@24.10.1
+      - name: Test actual responsive UI and interactions
+        run: |
+          python3 -m http.server 8080 --bind 127.0.0.1 >/tmp/webstudio-server.log 2>&1 &
+          sleep 2
+          CHROME_BIN="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium)"
+          export CHROME_BIN
+          NODE_PATH=/tmp/webstudio-qa/node_modules node tests/browser.cjs
