@@ -1,854 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link href="./css/styles.css" rel="stylesheet" />
-    <title>WebStudio</title>
-    <link rel="icon" type="image/svg+xml" href="./images/icons/astronaut.svg" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container header-container">
-        <nav class="nav-link">
-          <a href="./index.html" class="logo"
-            >Web<span class="logo-studio">Studio</span>
-          </a>
-          <button
-            class="menu-button"
-            type="button"
-            aria-label="Open menu button"
-            id="burgerBtn"
-          >
-            <svg class="menu-btn-icon" width="24" height="24">
-              <use href="./images/icons.svg#icon-burger"></use>
-            </svg>
-          </button>
-          <ul class="nav-list">
-            <li>
-              <a class="nav-link-item active" href="./index.html">Studio</a>
-            </li>
-            <li>
-              <a class="nav-link-item" href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a class="nav-link-item" href="#contacts">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="contact-link">
-          <ul class="contact-list">
-            <li>
-              <a class="contact-link-item" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li>
-              <a class="contact-link-item" href="tel:+110001111111"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
-        </address>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111a39">
+  <meta name="description" content="WebStudio — thoughtful digital strategy, exceptional websites and engaging product experiences. Explore our services, creative process and selected concepts.">
+  <meta property="og:title" content="WebStudio — Digital experiences that mean business">
+  <meta property="og:description" content="Strategy, design and development brought together with purpose.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="./images/webstudio-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script defer src="./js/site.js"></script>
+  <title>WebStudio — Digital Experiences That Mean Business</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="page-top">
+    <div class="container header-inner">
+      <a class="brand" href="#page-top" aria-label="WebStudio homepage">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="m6 12 7.1 17L20 15l6.9 14L34 12" stroke="currentColor" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="34" cy="32" r="3.4" fill="currentColor"/></svg></span>
+        <span>Web<span class="brand-highlight">Studio</span><span class="brand-dot">.</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#services">Expertise</a>
+        <a href="#work">Selected work</a>
+        <a href="#approach">Our approach</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="button button-dark header-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="mobile-navigation" aria-expanded="false" id="menu-toggle"><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" hidden>
+      <a href="#services">Expertise <span aria-hidden="true">↗</span></a>
+      <a href="#work">Selected work <span aria-hidden="true">↗</span></a>
+      <a href="#approach">Our approach <span aria-hidden="true">↗</span></a>
+      <a href="#faq">FAQ <span aria-hidden="true">↗</span></a>
+      <a href="#contact">Start a project <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-pad" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> INDEPENDENT DIGITAL STUDIO <span class="eyebrow-index">/ 01</span></p>
+          <h1 id="hero-title">Digital<br><span class="headline-outline">experiences</span><br>that <span class="headline-accent">move</span><br>business <span class="headline-circle">forward<span aria-hidden="true">↗</span></span></h1>
+          <p class="hero-description">Effective solutions for your business, designed with clarity and built to make every interaction count.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">Explore our work <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#services">What we do <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-footnote"><span class="mini-symbol" aria-hidden="true">✳</span><span>Strategy, design & development<br>working better together.</span></div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-photo"><img src="./images/background-images/desktop-people-office@2x_result.jpg" alt="Bright contemporary office workspace with creative teams collaborating" fetchpriority="high" decoding="async"></div>
+          <div class="hero-art-caption"><span>DESIGNED TO MAKE AN IMPACT</span><span>WS—001 <span aria-hidden="true">↗</span></span></div>
+          <div class="floating-card floating-card-top" aria-hidden="true"><span class="floating-icon">✳</span><strong>Ideas with<br>direction.</strong><span class="tiny-arrow">↗</span></div>
+          <div class="floating-card floating-card-bottom" aria-hidden="true"><span class="floating-mini">YOUR IDEA <span>→</span> OUR NEXT MOVE</span><span class="floating-orbit">◎</span></div>
+        </div>
       </div>
-    </header>
+      <div class="container hero-bottom"><span>WEBSTUDIO / CREATIVE PRACTICE</span><span>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span></div>
+    </section>
 
-    <!-- Content -->
-    <main>
-      <!--Section1-->
-      <section class="hero">
-        <div class="container hero-container">
-          <h1 class="hero-heading">Effective Solutions for Your Business</h1>
-          <button class="hero-button" type="button" id="orderServiceBtn">
-            Order Service
-          </button>
-        </div>
-      </section>
+    <div class="expertise-ticker" aria-label="Our expertise"><div class="container ticker-inner"><span>STRATEGY <b>✳</b> DIGITAL DESIGN</span><span>DEVELOPMENT <b>✳</b> BRAND THINKING</span><span class="ticker-last">INTERACTIVE EXPERIENCES <b>✳</b></span></div></div>
 
-      <!--Section2-->
-      <section class="features">
-        <div class="container">
-          <h2 class="visually-hidden">Features</h2>
-          <ul class="features-list">
-            <li class="features-item">
-              <div class="features-wrapper">
-                <svg class="features-icon" width="64" height="64">
-                  <use href="./images/icons.svg#icon-antenna"></use>
-                </svg>
-              </div>
-              <h3 class="features-subtitle">Strategy</h3>
-              <p class="features-text">
-                Our goal is to identify the business problem to walk away with
-                the perfect and creative solution.
-              </p>
-            </li>
-            <li class="features-item">
-              <div class="features-wrapper">
-                <svg class="features-icon" width="64" height="64">
-                  <use href="./images/icons.svg#icon-clock"></use>
-                </svg>
-              </div>
-              <h3 class="features-subtitle">Punctuality</h3>
-              <p class="features-text">
-                Bring the key message to the brand's audience for the best price
-                within the shortest possible time.
-              </p>
-            </li>
-            <li class="features-item">
-              <div class="features-wrapper">
-                <svg class="features-icon" width="64" height="64">
-                  <use href="./images/icons.svg#icon-diagram"></use>
-                </svg>
-              </div>
-              <h3 class="features-subtitle">Diligence</h3>
-              <p class="features-text">
-                Research and confirm brands that present the strongest digital
-                growth opportunities and minimize risk.
-              </p>
-            </li>
-            <li class="features-item">
-              <div class="features-wrapper">
-                <svg class="features-icon" width="64" height="64">
-                  <use href="./images/icons.svg#icon-astronaut"></use>
-                </svg>
-              </div>
-              <h3 class="features-subtitle">Technologies</h3>
-              <p class="features-text">
-                Design practice focused on digital experiences. We bring forth a
-                deep passion for problem-solving.
-              </p>
-            </li>
-          </ul>
+    <section class="section-pad services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-top"><p class="eyebrow"><span class="eyebrow-line"></span> WHAT WE DO / 02</p><span class="section-label">THE RIGHT SOLUTION, NOT JUST A PRETTY SCREEN</span></div>
+        <div class="section-heading-row"><h2 class="display-heading" id="services-title">Make your<br><em>next move</em> count.</h2><p>From the first conversation to the final detail, our focus is on digital work that looks exceptional, feels effortless and serves a real purpose.</p></div>
+        <div class="service-grid">
+          <article class="service-card service-featured"><div class="service-top"><span class="service-number">01 / THINK</span><span class="service-glyph" aria-hidden="true">↗</span></div><div class="service-bottom"><div class="service-icon" aria-hidden="true">✳</div><h3>Strategy<br>& direction.</h3><p>Turn a complicated idea into a clear product, message and experience your audience understands.</p><div class="service-tags"><span>Discovery</span><span>UX direction</span><span>Brand thinking</span></div></div></article>
+          <article class="service-card"><div class="service-top"><span class="service-number">02 / DESIGN</span><span class="service-glyph" aria-hidden="true">↗</span></div><div class="service-bottom"><div class="service-icon" aria-hidden="true">◈</div><h3>Websites<br>with presence.</h3><p>Beautiful, responsive pages where every section has a job to do — and every click feels intuitive.</p><div class="service-tags"><span>Web design</span><span>UI systems</span><span>Landing pages</span></div></div></article>
+          <article class="service-card"><div class="service-top"><span class="service-number">03 / BUILD</span><span class="service-glyph" aria-hidden="true">↗</span></div><div class="service-bottom"><div class="service-icon" aria-hidden="true">⌘</div><h3>Digital products<br>that work.</h3><p>Thoughtful front-end development with responsive layouts, accessible interactions and the details that matter.</p><div class="service-tags"><span>Frontend</span><span>Interactions</span><span>Performance</span></div></div></article>
+          <article class="service-card"><div class="service-top"><span class="service-number">04 / EVOLVE</span><span class="service-glyph" aria-hidden="true">↗</span></div><div class="service-bottom"><div class="service-icon" aria-hidden="true">◎</div><h3>Better digital<br>experiences.</h3><p>Refine the way people discover, navigate and interact with your brand across the digital journey.</p><div class="service-tags"><span>UX improvements</span><span>Content</span><span>Iteration</span></div></div></article>
         </div>
-      </section>
-      <!--Section3-->
-      <section class="our-team">
-        <div class="container">
-          <h2 class="our-team-title">Our Team</h2>
-          <ul class="our-team-list">
-            <li class="our-team-item">
-              <picture>
-                <img
-                  class="our-team-img"
-                  srcset="
-                    ./images/img1.jpg                    1x,
-                    ./images/our-team/img1@2x_result.jpg 2x
-                  "
-                  src="./images/img1.jpg"
-                  width="264"
-                  alt="Team Member 1"
-                  loading="lazy"
-                />
-              </picture>
-              <div class="our-team-information">
-                <h3 class="our-team-subtitle">Mark Guerrero</h3>
-                <p class="our-team-text">Product Designer</p>
-                <ul class="social-list">
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="our-team-item">
-              <picture>
-                <img
-                  class="our-team-img"
-                  srcset="
-                    ./images/img2.jpg                    1x,
-                    ./images/our-team/img2@2x_result.jpg 2x
-                  "
-                  src="./images/img2.jpg"
-                  width="264"
-                  alt="Team Member 2"
-                  loading="lazy"
-                />
-              </picture>
-              <div class="our-team-information">
-                <h3 class="our-team-subtitle">Tom Ford</h3>
-                <p class="our-team-text">Frontend Developer</p>
-                <ul class="social-list">
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="our-team-item">
-              <picture>
-                <img
-                  class="our-team-img"
-                  srcset="
-                    ./images/img3.jpg                    1x,
-                    ./images/our-team/img3@2x_result.jpg 2x
-                  "
-                  src="./images/img3.jpg"
-                  width="264"
-                  alt="Team Member 3"
-                  loading="lazy"
-                />
-              </picture>
-              <div class="our-team-information">
-                <h3 class="our-team-subtitle">Camila Garcia</h3>
-                <p class="our-team-text">Marketing</p>
-                <ul class="social-list">
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="our-team-item">
-              <picture>
-                <img
-                  class="our-team-img"
-                  srcset="
-                    ./images/img4.jpg                    1x,
-                    ./images/our-team/img4@2x_result.jpg 2x
-                  "
-                  src="./images/img4.jpg"
-                  width="264"
-                  alt="Team Member 4"
-                  loading="lazy"
-                />
-              </picture>
-              <div class="our-team-information">
-                <h3 class="our-team-subtitle">Daniel Wilson</h3>
-                <p class="our-team-text">UI Designer</p>
-                <ul class="social-list">
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="">
-                      <svg class="icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
+      </div>
+    </section>
+
+    <section class="work section-pad" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-top"><p class="eyebrow"><span class="eyebrow-line"></span> THE WORK / 03</p><span class="section-label">A COLLECTION OF CREATIVE DIRECTIONS</span></div>
+        <div class="section-heading-row work-heading"><h2 class="display-heading" id="work-title">Selected <em>work.</em></h2><p>Explore a mix of digital product, visual design and web concepts — different challenges, each with its own visual direction.</p></div>
+        <div class="filter-toolbar" role="group" aria-label="Filter portfolio projects">
+          <div class="filter-buttons"><button class="filter active" type="button" data-filter="all" aria-pressed="true">All work <span>06</span></button><button class="filter" type="button" data-filter="app" aria-pressed="false">Apps</button><button class="filter" type="button" data-filter="web" aria-pressed="false">Web</button><button class="filter" type="button" data-filter="creative" aria-pressed="false">Creative</button></div>
+          <span class="work-counter" id="work-counter" aria-live="polite">SHOWING 06 PROJECTS</span>
         </div>
-      </section>
-      <!--Section 4-->
-      <section class="our-portfolio">
-        <div class="container">
-          <h2 class="our-portfolio-title" id="portfolio">Our Portfolio</h2>
-          <ul class="our-portfolio-list">
-            <li class="our-portfolio-item">
-              <div class="overlay-wrapper">
-                <picture>
-                  <!-- Desktop screen -->
-                  <source
-                    media="(min-width: 1158px)"
-                    srcset="
-                      ./images/images/img1.jpg                          1x,
-                      ./images/our-portfolio/desktop/img6@2x_result.jpg 2x
-                    "
-                  />
-                  <!-- Tablet screen -->
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/our-portfolio/tablet/img-5_result.jpg    1x,
-                      ./images/our-portfolio/tablet/img@2x-5_result.jpg 2x
-                    "
-                  />
-                  <!-- Mobile screen -->
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      ./images/our-portfolio/mobile/img-5_result.jpg    1x,
-                      ./images/our-portfolio/mobile/img@2x-5_result.jpg 2x
-                    "
-                  />
-                  <img
-                    src="./images/images/img1.jpg"
-                    width="360"
-                    height="300"
-                    alt="Banking App"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="overlay-text">
-                  14 Stylish and User-Friendly App Design Concepts · Task
-                  Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
-                  · Cloud Storage App
-                </p>
-              </div>
-              <div class="our-portfolio-info">
-                <h3 class="our-portfolio-subtitle">Banking App</h3>
-                <p class="our-portfolio-text">App</p>
-              </div>
-            </li>
-            <li class="our-portfolio-item">
-              <div class="overlay-wrapper">
-                <picture>
-                  <!-- Desktop screen -->
-                  <source
-                    media="(min-width: 1158px)"
-                    srcset="
-                      ./images/images/img2.jpg                        1x,
-                      ./images/our-portfolio/desktop/img5_desk@2x.jpg 2x
-                    "
-                  />
-                  <!-- Tablet screen -->
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/our-portfolio/tablet/img-4_result.jpg    1x,
-                      ./images/our-portfolio/tablet/img@2x-4_result.jpg 2x
-                    "
-                  />
-                  <!-- Mobile screen -->
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      ./images/our-portfolio/mobile/img-4_result.jpg    1x,
-                      ./images/our-portfolio/mobile/img@2x-4_result.jpg 2x
-                    "
-                  />
-                  <img
-                    src="./images/images/img2.jpg"
-                    width="360"
-                    height="300"
-                    alt="Cashless Payment"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="overlay-text">
-                  14 Stylish and User-Friendly App Design Concepts · Task
-                  Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
-                  · Cloud Storage App
-                </p>
-              </div>
-              <div class="our-portfolio-info">
-                <h3 class="our-portfolio-subtitle">Cashless Payment</h3>
-                <p class="our-portfolio-text">Marketing</p>
-              </div>
-            </li>
-            <li class="our-portfolio-item">
-              <div class="overlay-wrapper">
-                <picture>
-                  <!-- Desktop screen -->
-                  <source
-                    media="(min-width: 1158px)"
-                    srcset="
-                      ./images/images/img3.jpg                          1x,
-                      ./images/our-portfolio/desktop/img4@2x_result.jpg 2x
-                    "
-                  />
-                  <!-- Tablet screen -->
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/our-portfolio/tablet/img-3_result.jpg    1x,
-                      ./images/our-portfolio/tablet/img@2x-3_result.jpg 2x
-                    "
-                  />
-                  <!-- Mobile screen -->
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      ./images/our-portfolio/mobile/img-3_result.jpg    1x,
-                      ./images/our-portfolio/mobile/img@2x-3_result.jpg 2x
-                    "
-                  />
-                  <img
-                    src="./images/images/img3.jpg"
-                    width="360"
-                    height="300"
-                    alt="Meditation App"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="overlay-text">
-                  14 Stylish and User-Friendly App Design Concepts · Task
-                  Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
-                  · Cloud Storage App
-                </p>
-              </div>
-              <div class="our-portfolio-info">
-                <h3 class="our-portfolio-subtitle">Meditation App</h3>
-                <p class="our-portfolio-text">App</p>
-              </div>
-            </li>
-            <li class="our-portfolio-item">
-              <div class="overlay-wrapper">
-                <picture>
-                  <!-- Desktop screen -->
-                  <source
-                    media="(min-width: 1158px)"
-                    srcset="
-                      ./images/images/img4.jpg                          1x,
-                      ./images/our-portfolio/desktop/img3@2x_result.jpg 2x
-                    "
-                  />
-                  <!-- Tablet screen -->
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/our-portfolio/tablet/img-2_result.jpg    1x,
-                      ./images/our-portfolio/tablet/img@2x-2_result.jpg 2x
-                    "
-                  />
-                  <!-- Mobile screen -->
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      ./images/our-portfolio/mobile/img-2_result.jpg    1x,
-                      ./images/our-portfolio/mobile/img@2x-2_result.jpg 2x
-                    "
-                  />
-                  <img
-                    src="./images/images/img4.jpg"
-                    width="360"
-                    height="300"
-                    alt="Taxi Service"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="overlay-text">
-                  14 Stylish and User-Friendly App Design Concepts · Task
-                  Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
-                  · Cloud Storage App
-                </p>
-              </div>
-              <div class="our-portfolio-info">
-                <h3 class="our-portfolio-subtitle">Taxi Service</h3>
-                <p class="our-portfolio-text">Marketing</p>
-              </div>
-            </li>
-            <li class="our-portfolio-item">
-              <div class="overlay-wrapper">
-                <picture>
-                  <!-- Desktop screen -->
-                  <source
-                    media="(min-width: 1158px)"
-                    srcset="
-                      ./images/images/img5.jpg                          1x,
-                      ./images/our-portfolio/desktop/img2@2x_result.jpg 2x
-                    "
-                  />
-                  <!-- Tablet screen -->
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/our-portfolio/tablet/img-1_result.jpg    1x,
-                      ./images/our-portfolio/tablet/img@2x-1_result.jpg 2x
-                    "
-                  />
-                  <!-- Mobile screen -->
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      ./images/our-portfolio/mobile/img-1_result.jpg    1x,
-                      ./images/our-portfolio/mobile/img@2x-1_result.jpg 2x
-                    "
-                  />
-                  <img
-                    src="./images/images/img5.jpg"
-                    width="360"
-                    height="300"
-                    alt="Screen Illustrations"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="overlay-text">
-                  14 Stylish and User-Friendly App Design Concepts · Task
-                  Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
-                  · Cloud Storage App
-                </p>
-              </div>
-              <div class="our-portfolio-info">
-                <h3 class="our-portfolio-subtitle">Screen Illustrations</h3>
-                <p class="our-portfolio-text">Design</p>
-              </div>
-            </li>
-            <li class="our-portfolio-item">
-              <div class="overlay-wrapper">
-                <picture>
-                  <!-- Desktop screen -->
-                  <source
-                    media="(min-width: 1158px)"
-                    srcset="
-                      ./images/images/img6.jpg                          1x,
-                      ./images/our-portfolio/desktop/img1@2x_result.jpg 2x
-                    "
-                  />
-                  <!-- Tablet screen -->
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/our-portfolio/tablet/img_result.jpg    1x,
-                      ./images/our-portfolio/tablet/img@2x_result.jpg 2x
-                    "
-                  />
-                  <!-- Mobile screen -->
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      ./images/our-portfolio/mobile/img_result.jpg    1x,
-                      ./images/our-portfolio/mobile/img@2x_result.jpg 2x
-                    "
-                  />
-                  <img
-                    src="./images/images/img6.jpg"
-                    width="360"
-                    height="300"
-                    alt="Online Courses"
-                    loading="lazy"
-                  />
-                </picture>
-                <p class="overlay-text">
-                  14 Stylish and User-Friendly App Design Concepts · Task
-                  Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
-                  · Cloud Storage App
-                </p>
-              </div>
-              <div class="our-portfolio-info">
-                <h3 class="our-portfolio-subtitle">Online Courses</h3>
-                <p class="our-portfolio-text">Marketing</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-    <!--Footer-->
-    <footer class="footer" id="contacts">
-      <div class="container footer-bottom">
-        <div class="footer-left">
-          <a href="./index.html" class="footer-logo"
-            >Web<span class="footer-logo-studio">Studio</span>
-          </a>
-          <p class="footer-text">
-            Increase the flow of customers and sales for your business with
-            digital marketing & growth solutions.
-          </p>
-        </div>
-        <div class="footer-socials">
-          <p class="footer-socials-text">Social media</p>
-          <ul class="footer-socials-list">
-            <li class="footer-socials-elem">
-              <a href="" class="footer-socials-link">
-                <svg class="footer-socials-icons" width="24" height="24">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-socials-elem">
-              <a href="" class="footer-socials-link">
-                <svg class="footer-socials-icons" width="24" height="24">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-socials-elem">
-              <a href="" class="footer-socials-link">
-                <svg class="footer-socials-icons" width="24" height="24">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-socials-elem">
-              <a href="" class="footer-socials-link">
-                <svg class="footer-socials-icons" width="24" height="24">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-modal">
-          <p class="footer-text-subs">Subscribe</p>
-          <form class="footer-modal-form">
-            <label class="form-label">
-              <input
-                type="email"
-                name="email"
-                class="form-input"
-                placeholder="E-mail"
-              />
-            </label>
-            <button type="submit" class="footer-form-button">
-              Subscribe
-              <svg class="icon-footer" width="24" height="24">
-                <use href="./images/icons.svg#icon-footer"></use>
-              </svg>
+        <div class="work-grid" id="work-grid">
+          <article class="project-card project-wide" data-category="app">
+            <button type="button" class="project-open" data-project="banking" aria-label="Explore Banking App concept">
+              <span class="project-image project-image-blue"><img src="./images/our-portfolio/desktop/img6@2x_result.jpg" alt="Banking app visual concept with digital interface screens" loading="lazy"><span class="project-view">VIEW PROJECT <span aria-hidden="true">↗</span></span></span>
+              <span class="project-info"><span><span class="project-index">01 / APP DESIGN</span><strong>Banking App</strong><small>A simpler way to interact with finance.</small></span><span class="project-arrow" aria-hidden="true">↗</span></span>
             </button>
-          </form>
+          </article>
+          <article class="project-card" data-category="creative">
+            <button type="button" class="project-open" data-project="cashless" aria-label="Explore Cashless Payment concept">
+              <span class="project-image project-image-lavender"><img src="./images/our-portfolio/desktop/img5_desk@2x.jpg" alt="Cashless payment visual concept" loading="lazy"><span class="project-view">VIEW PROJECT <span aria-hidden="true">↗</span></span></span>
+              <span class="project-info"><span><span class="project-index">02 / VISUAL COMMUNICATION</span><strong>Cashless Payment</strong><small>Everyday transactions, reimagined.</small></span><span class="project-arrow" aria-hidden="true">↗</span></span>
+            </button>
+          </article>
+          <article class="project-card" data-category="app">
+            <button type="button" class="project-open" data-project="meditation" aria-label="Explore Meditation App concept">
+              <span class="project-image project-image-peach"><img src="./images/our-portfolio/desktop/img4@2x_result.jpg" alt="Meditation app visual design with mobile screens" loading="lazy"><span class="project-view">VIEW PROJECT <span aria-hidden="true">↗</span></span></span>
+              <span class="project-info"><span><span class="project-index">03 / APP DESIGN</span><strong>Meditation App</strong><small>A calm space for a clearer mind.</small></span><span class="project-arrow" aria-hidden="true">↗</span></span>
+            </button>
+          </article>
+          <article class="project-card" data-category="web">
+            <button type="button" class="project-open" data-project="taxi" aria-label="Explore Taxi Service concept">
+              <span class="project-image project-image-sand"><img src="./images/our-portfolio/desktop/img3@2x_result.jpg" alt="Taxi service digital interface and branding concept" loading="lazy"><span class="project-view">VIEW PROJECT <span aria-hidden="true">↗</span></span></span>
+              <span class="project-info"><span><span class="project-index">04 / WEB EXPERIENCE</span><strong>Taxi Service</strong><small>Make getting there feel effortless.</small></span><span class="project-arrow" aria-hidden="true">↗</span></span>
+            </button>
+          </article>
+          <article class="project-card" data-category="creative">
+            <button type="button" class="project-open" data-project="illustration" aria-label="Explore Screen Illustrations concept">
+              <span class="project-image project-image-mint"><img src="./images/our-portfolio/desktop/img2@2x_result.jpg" alt="Colourful screen illustration compositions" loading="lazy"><span class="project-view">VIEW PROJECT <span aria-hidden="true">↗</span></span></span>
+              <span class="project-info"><span><span class="project-index">05 / VISUAL DESIGN</span><strong>Screen Illustrations</strong><small>Personality in the smallest details.</small></span><span class="project-arrow" aria-hidden="true">↗</span></span>
+            </button>
+          </article>
+          <article class="project-card project-wide" data-category="web">
+            <button type="button" class="project-open" data-project="courses" aria-label="Explore Online Courses concept">
+              <span class="project-image project-image-blue"><img src="./images/our-portfolio/desktop/img1@2x_result.jpg" alt="Online course platform visual concept" loading="lazy"><span class="project-view">VIEW PROJECT <span aria-hidden="true">↗</span></span></span>
+              <span class="project-info"><span><span class="project-index">06 / WEB PLATFORM</span><strong>Online Courses</strong><small>Learning, made more engaging.</small></span><span class="project-arrow" aria-hidden="true">↗</span></span>
+            </button>
+          </article>
+        </div>
+        <p class="work-disclaimer">Selected visual concepts from the studio archive. Details illustrate design direction rather than verified client results.</p>
+      </div>
+    </section>
+
+    <section class="approach section-pad" id="approach" aria-labelledby="approach-title">
+      <div class="container approach-layout">
+        <div class="approach-intro"><p class="eyebrow"><span class="eyebrow-line"></span> HOW WE WORK / 04</p><h2 class="display-heading" id="approach-title">Good work<br>has a <em>process.</em></h2><p>No mystery. No unnecessary complexity. Just a thoughtful route from a promising idea to a digital experience people enjoy using.</p><a class="text-link light-link" href="#contact">Let's build yours <span aria-hidden="true">↗</span></a><div class="approach-decoration" aria-hidden="true">✳</div></div>
+        <ol class="process-list">
+          <li><span class="process-number">01</span><div><h3>Discover</h3><p>Understand the audience, the goals and what success should look like for the project.</p></div><span aria-hidden="true">↗</span></li>
+          <li><span class="process-number">02</span><div><h3>Define</h3><p>Shape the core idea, content structure and a clear direction before the visuals begin.</p></div><span aria-hidden="true">↗</span></li>
+          <li><span class="process-number">03</span><div><h3>Design & build</h3><p>Bring the concept to life through considered design, responsive layouts and functional interactions.</p></div><span aria-hidden="true">↗</span></li>
+          <li><span class="process-number">04</span><div><h3>Refine & deliver</h3><p>Check the details, polish usability and prepare the experience for its next step.</p></div><span aria-hidden="true">↗</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="value-section section-pad" aria-labelledby="value-title">
+      <div class="container value-grid">
+        <div class="value-image"><img src="./images/background-images/desktop-people-office@2x_result.jpg" alt="Collaborative studio workspace" loading="lazy"><span class="value-sticker" aria-hidden="true">FORM<br>MEETS<br>FUNCTION<span>↗</span></span></div>
+        <div class="value-copy"><p class="eyebrow"><span class="eyebrow-line"></span> THE BIGGER PICTURE / 05</p><h2 class="display-heading" id="value-title">Built to be<br><em>more than</em><br>beautiful.</h2><p>A strong digital presence needs more than eye-catching screens. It needs a clear story, comfortable navigation and a reason for people to stay.</p>
+          <ul class="value-points">
+            <li><span aria-hidden="true">↗</span><div><strong>Purpose in every section</strong><p>Content and design work together to guide the experience.</p></div></li>
+            <li><span aria-hidden="true">↗</span><div><strong>Responsive by design</strong><p>Flexible layouts for small screens, large screens and everything between.</p></div></li>
+            <li><span aria-hidden="true">↗</span><div><strong>Interactions that feel right</strong><p>Simple, accessible controls that make websites easier to use.</p></div></li>
+          </ul>
         </div>
       </div>
-    </footer>
-    <!--Modal window-->
+    </section>
 
-    <div class="backdrop hide" id="modalWindow">
-      <div class="modal">
-        <button
-          class="modal-button"
-          type="button"
-          aria-label="Modal close button"
-          id="closeForm"
-        >
-          <svg class="modal-button-icon" width="8" height="8">
-            <use href="./images/icons.svg#icon-close"></use>
-          </svg>
-        </button>
-        <p class="modal-text">Leave your contacts and we will call you back</p>
-        <form class="modal-form">
-          <div class="form-wrapper">
-            <label class="modal-label" for="user-name">Name</label>
-            <div class="form-field">
-              <input
-                class="modal-form-input"
-                id="user-name"
-                name="user-name"
-                type="text"
-                required
-              />
-              <svg class="form-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-person"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="form-wrapper">
-            <label class="modal-label" for="user-name">Phone</label>
-            <div class="form-field">
-              <input
-                class="modal-form-input"
-                id="user-phone"
-                name="user-phone"
-                type="tel"
-                required
-              />
-              <svg class="form-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-phone"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="form-wrapper">
-            <label class="modal-label" for="user-email">Email</label>
-            <div class="form-field">
-              <input
-                class="modal-form-input"
-                id="user-email"
-                name="user-email"
-                type="email"
-                required
-              />
-              <svg class="form-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-email"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="form-wrapper-textarea">
-            <label class="modal-label" for="user-comment">Comment</label>
-            <textarea
-              class="textarea-field"
-              id="user-comment"
-              name="user-comment"
-              rows="5"
-              placeholder="Text input"
-            ></textarea>
-          </div>
-          <div class="form-agreement-main">
-            <input
-              class="field-checkbox visually-hidden"
-              id="user-privacy"
-              type="checkbox"
-              name="user-privacy"
-              value="true"
-            />
-            <label class="modal-label form-agreement" for="user-privacy">
-              <span class="form-agreement-checkbox">
-                <svg class="form-agreement-icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-button-checked"></use>
-                </svg>
-              </span>
-              <span>
-                I accept the terms and conditions of the
-                <a class="form-agreement-link" href=""> Privacy Policy</a>
-              </span>
-            </label>
-          </div>
-          <button class="modal-form-button" type="submit" id="submitBtn">
-            Send
-          </button>
-        </form>
+    <section class="faq section-pad" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="faq-intro"><p class="eyebrow"><span class="eyebrow-line"></span> QUESTIONS / 06</p><h2 class="display-heading" id="faq-title">Curious?<br><em>We get it.</em></h2><p>A few answers before the first conversation.</p></div>
+        <div class="faq-list">
+          <details><summary>What kinds of projects can WebStudio help with? <span aria-hidden="true">+</span></summary><p>Our focus is on brand-led websites, landing pages, user interfaces and digital product experiences, from early strategy through polished front-end delivery.</p></details>
+          <details><summary>Can we start with a smaller project? <span aria-hidden="true">+</span></summary><p>Absolutely. A focused landing page, a design refresh or a single product flow can be a sensible first step before a larger build.</p></details>
+          <details><summary>Will the experience work on mobile? <span aria-hidden="true">+</span></summary><p>Responsive layouts and accessible interactions are considered from the start, rather than being added after the desktop experience.</p></details>
+          <details><summary>How does a collaboration begin? <span aria-hidden="true">+</span></summary><p>Start by outlining the goal, scope and priorities. That helps define the next steps and clarify what needs to be built before any work begins.</p></details>
+          <details><summary>Does the project brief form send anything automatically? <span aria-hidden="true">+</span></summary><p>No. On this demonstration website, the form prepares a brief in your browser that you can copy or download. No backend submission or email delivery is configured.</p></details>
+        </div>
       </div>
+    </section>
+
+    <section class="contact section-pad" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-heading"><p class="eyebrow"><span class="eyebrow-line"></span> START SOMETHING / 07</p><div class="contact-heading-row"><h2 class="display-heading" id="contact-title">Have an idea?<br><em>Let's shape it.</em></h2><p>Tell us what you're imagining. Build a simple project brief you can keep, refine and share when you're ready.</p></div></div>
+        <div class="contact-layout">
+          <form id="brief-form" class="brief-form">
+            <div class="form-grid">
+              <label>YOUR NAME <input name="name" type="text" placeholder="What should we call you?" minlength="2" maxlength="100" autocomplete="name" required></label>
+              <label>EMAIL ADDRESS <input name="email" type="email" placeholder="you@company.com" autocomplete="email" required></label>
+              <label>TYPE OF PROJECT <select name="service" required><option value="" selected disabled>Choose a direction</option><option>Website / landing page</option><option>Web application / product</option><option>UI / UX design</option><option>Brand & digital strategy</option><option>Not sure yet</option></select></label>
+              <label>IDEAL TIMELINE <select name="timeline"><option value="">Still exploring</option><option>Within 1 month</option><option>1–3 months</option><option>3–6 months</option><option>Flexible</option></select></label>
+            </div>
+            <label>YOUR IDEA <textarea name="message" rows="4" minlength="10" maxlength="3000" placeholder="What are you hoping to create, improve or solve?" required></textarea></label>
+            <div class="form-footer"><p><span aria-hidden="true">⌁</span> Demo form: your details stay in this browser. You'll be able to copy or download your brief — nothing is submitted automatically.</p><button class="button button-primary" type="submit">Prepare my brief <span aria-hidden="true">↗</span></button></div>
+          </form>
+          <aside class="contact-aside"><div class="aside-icon" aria-hidden="true">✳</div><p>ONE GOOD IDEA CAN START SOMETHING GREAT.</p><span class="aside-rule"></span><h3>Small details.<br>Big thinking.</h3><span class="aside-bottom">WEBSTUDIO / STAY CURIOUS <span aria-hidden="true">↗</span></span></aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-upper">
+      <div><a class="brand footer-brand" href="#page-top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="m6 12 7.1 17L20 15l6.9 14L34 12" stroke="currentColor" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="34" cy="32" r="3.4" fill="currentColor"/></svg></span><span>Web<span class="brand-highlight">Studio</span><span class="brand-dot">.</span></span></a><p>Digital experiences with clarity, character and purpose.</p></div>
+      <div class="footer-nav"><span>EXPLORE</span><a href="#services">Expertise</a><a href="#work">Selected work</a><a href="#approach">How we work</a></div>
+      <div class="footer-nav"><span>GET STARTED</span><a href="#contact">Create a project brief</a><a href="#faq">Common questions</a><a href="#page-top">Back to top ↗</a></div>
     </div>
-    <!-- Mobile menu-->
-    <div class="mobile-menu" id="mobileMenu">
-      <button type="button" class="mobile-menu-btn" id="mobileMenuClose">
-        <svg class="mobile-menu-btn-icon" width="8" height="8">
-          <use href="./images/icons.svg#icon-menu-x"></use>
-        </svg>
-      </button>
-      <ul class="mobile-menu-list">
-        <li class="mobile-menu-item">
-          <a href="" class="mobile-menu-link active">Studio</a>
-        </li>
-        <li class="mobile-menu-item">
-          <a href="" class="mobile-menu-link">Portfolio</a>
-        </li>
-        <li class="mobile-menu-item">
-          <a href="" class="mobile-menu-link">Contacts</a>
-        </li>
-      </ul>
-      <ul class="mobile-menu-contacts">
-        <li class="mobile-menu-item">
-          <a href="tel:+110001111111" class="mobile-menu-contact accent"
-            >+11 (000) 111-11-11</a
-          >
-        </li>
-        <li class="mobile-menu-item">
-          <a href="mailto:info@devstudio.com" class="mobile-menu-contact"
-            >info@devstudio.com</a
-          >
-        </li>
-      </ul>
-      <ul class="mobile-menu-socials socials">
-        <li class="footer-socials-elem">
-          <a href="" class="footer-socials-link">
-            <svg class="footer-socials-icons" width="24" height="24">
-              <use href="./images/icons.svg#icon-instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="footer-socials-elem">
-          <a href="" class="footer-socials-link">
-            <svg class="footer-socials-icons" width="24" height="24">
-              <use href="./images/icons.svg#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="footer-socials-elem">
-          <a href="" class="footer-socials-link">
-            <svg class="footer-socials-icons" width="24" height="24">
-              <use href="./images/icons.svg#icon-facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="footer-socials-elem">
-          <a href="" class="footer-socials-link">
-            <svg class="footer-socials-icons" width="24" height="24">
-              <use href="./images/icons.svg#icon-linkedin"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <script src="./js/practice.js"></script>
-  </body>
+    <div class="container footer-lower"><span>© <span id="copyright-year">2026</span> WEBSTUDIO. MADE WITH INTENTION.</span><span>THINK GOOD. MAKE BETTER. ✳</span></div>
+  </footer>
+
+  <button id="back-to-top" class="back-top" type="button" aria-label="Scroll back to top" title="Back to top" hidden>↑</button>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <dialog id="project-dialog" class="project-dialog" aria-labelledby="project-dialog-title">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Close project details">×</button>
+    <div class="project-dialog-image"><img id="project-dialog-image" alt=""></div>
+    <div class="project-dialog-body"><span class="eyebrow" id="project-dialog-category">SELECTED WORK</span><h2 id="project-dialog-title"></h2><p id="project-dialog-description"></p><div class="project-dialog-focus"><strong>PROJECT FOCUS</strong><ul id="project-dialog-tags"></ul></div><p class="dialog-note">Concept presentation — not a claim of client results.</p><a class="button button-primary" href="#contact" id="project-dialog-cta">Discuss a similar project ↗</a></div>
+  </dialog>
+
+  <dialog id="brief-dialog" class="brief-dialog" aria-labelledby="brief-dialog-title">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Close brief">×</button>
+    <p class="eyebrow">YOUR PROJECT BRIEF / READY TO USE</p><h2 id="brief-dialog-title">A great first <em>step.</em></h2><p>Review the summary below. Copy it or download a text file to share later. This demo does not send your information anywhere.</p>
+    <label class="visually-hidden" for="brief-preview">Project brief summary</label>
+    <textarea id="brief-preview" readonly rows="12"></textarea>
+    <div class="brief-actions"><button id="copy-brief" class="button button-primary" type="button">Copy brief <span aria-hidden="true">⧉</span></button><button id="download-brief" class="button button-outline" type="button">Download .txt <span aria-hidden="true">↓</span></button></div>
+  </dialog>
+</body>
 </html>
