@@ -437,6 +437,132 @@ dialog::backdrop{background:#0d1533bb;backdrop-filter:blur(5px)}
   .brief-actions .button{flex:1 1 100%}
   .brief-dialog{padding:25px 19px}
 }
+
+/* WebStudio 2.1 — refined editorial section and intrinsic-size safeguards. */
+html, body { max-width:100%; }
+body { min-width:0; }
+main, header, footer, section { min-width:0; }
+.container, .hero-copy, .hero-art, .section-heading-row, .section-heading-row > *,
+.service-grid, .service-card, .work-grid, .project-card, .project-open,
+.project-info, .approach-layout, .value-grid, .faq-grid, .contact-layout,
+.brief-form, .form-grid, .footer-upper, .footer-upper > * { min-width:0; }
+h1, h2, h3, p, .project-info strong { overflow-wrap:break-word; }
+button, input, select, textarea { max-width:100%; }
+.service-card, .project-open { transition:transform .28s var(--ease),box-shadow .28s var(--ease),border-color .28s ease; }
+.service-card:hover { border-color:#cad1fc; }
+.project-open:hover { border-color:#bbc4ff; }
+.project-open:focus-visible, .service-card:focus-within { outline-offset:4px; }
+.project-image img { transform-origin:center; }
+@media(hover:none) {
+  .service-card:hover, .project-open:hover, .button:hover { transform:none; }
+}
+
+/* A small editorial bridge makes the services-to-work transition more intentional. */
+.principles {
+  position:relative;
+  isolation:isolate;
+  padding:clamp(35px,4vw,56px) 0;
+  overflow:clip;
+  background:linear-gradient(115deg,#e7ebff 0%,#f5f7ff 68%,#e9edff 100%);
+  border-block:1px solid #dee4fc;
+}
+.principles::before {
+  content:"✳";
+  position:absolute;
+  right:-25px;
+  top:-120px;
+  z-index:-1;
+  font:600 clamp(250px,30vw,480px)/1 var(--heading);
+  color:#6578ff0d;
+  pointer-events:none;
+}
+.principles-layout { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.45fr); align-items:center; gap:clamp(28px,4vw,65px); }
+.principles-kicker { display:inline-flex; align-items:center; gap:10px; color:#57639b; font-size:10px; letter-spacing:.16em; font-weight:800; }
+.principles-kicker span { color:var(--blue); font-size:18px; }
+.principles-intro h2 { margin-top:14px; font:600 clamp(25px,2.6vw,41px)/1.12 var(--heading); letter-spacing:-.055em; color:var(--ink); }
+.principles-intro h2 em { font-style:normal; color:var(--blue); }
+.principles-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.principle { min-width:0; padding:18px 17px; border:1px solid #dce2f6; border-radius:13px; background:#ffffffb8; box-shadow:0 8px 24px #293e6e0a; }
+.principle-number { display:block; color:var(--blue); font-size:11px; font-weight:800; margin-bottom:15px; }
+.principle h3 { font:600 clamp(16px,1.55vw,20px)/1.2 var(--heading); letter-spacing:-.04em; color:var(--ink); margin-bottom:8px; }
+.principle p { font-size:11px; line-height:1.65; color:#6c7894; }
+
+/* Fix actual narrow-screen width constraints instead of masking them at the root. */
+@media(max-width:1000px) {
+  .principles-layout { grid-template-columns:1fr; gap:23px; }
+  .principles-grid { gap:10px; }
+  .hero-art { width:calc(100% - 48px); }
+  .header-inner { min-width:0; }
+  .mobile-nav { max-width:100%; }
+}
+@media(max-width:760px) {
+  .principles { padding:32px 0; }
+  .principles-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .principle { padding:15px 13px; }
+  .principle p { font-size:11px; }
+  .hero-grid { grid-template-columns:minmax(0,1fr); }
+  .hero-art { width:calc(100% - 20px); max-width:100%; margin-inline:10px; }
+  .hero-copy .eyebrow { flex-wrap:wrap; row-gap:5px; }
+  .hero h1 { max-width:100%; font-size:clamp(38px,9vw,66px); letter-spacing:-.075em; }
+  .hero-art-caption { max-width:calc(100% - 50px); }
+  .headline-circle { white-space:normal; }
+  .ticker-inner { justify-content:center; gap:clamp(8px,2vw,20px); flex-wrap:wrap; padding-block:13px; text-align:center; }
+  .ticker-inner > span { white-space:normal; font-size:clamp(10px,2.2vw,12px); }
+  .ticker-inner b { margin-inline:8px; }
+  .filter-toolbar, .filter-buttons { min-width:0; }
+  .filter-buttons { width:100%; }
+  .filter { white-space:normal; overflow-wrap:break-word; line-height:1.25; }
+  .project-info strong { overflow-wrap:anywhere; }
+  .project-info small { overflow-wrap:break-word; }
+  .form-footer { min-width:0; }
+  .footer-upper, .footer-nav { min-width:0; }
+}
+@media(max-width:490px) {
+  .hero { padding-top:30px; }
+  .hero h1 { font-size:clamp(35px,9.4vw,46px); letter-spacing:-.075em; line-height:1.08; }
+  .hero-copy .eyebrow { margin-bottom:20px; font-size:10px; }
+  .hero-description { margin-top:17px; }
+  .hero-art { width:100%; height:clamp(250px,78vw,320px); margin:0; padding:0 0 18px; }
+  .hero-photo { border-radius:14px 14px 48px 14px; }
+  .hero-art-caption { bottom:35px; left:13px; right:14px; font-size:8px; letter-spacing:.015em; }
+  .floating-card-top { right:5px; top:12px; width:109px; min-height:80px; padding:9px; transform:rotate(3deg); }
+  .floating-card-top strong { font-size:13px; }
+  .floating-card-bottom { left:5px; bottom:2px; padding:9px 11px; gap:7px; transform:rotate(-2deg); }
+  .floating-mini { font-size:8px; }
+  .floating-orbit { font-size:16px; }
+  .principles-grid { grid-template-columns:1fr; gap:8px; }
+  .principle { display:grid; grid-template-columns:44px minmax(0,1fr); column-gap:12px; align-items:start; padding:13px 15px; }
+  .principle-number { grid-row:span 2; margin:1px 0 0; }
+  .principle h3 { margin-bottom:3px; }
+  .principle p { font-size:11px; }
+  .filter-buttons { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; }
+  .filter { min-width:0; min-height:43px; padding:9px 8px; font-size:11px; white-space:normal; }
+  .filter span { margin-left:4px; }
+  .service-card { min-height:0; }
+  .service-card p { min-height:0; }
+  .project-image { aspect-ratio:1.45; }
+  .project-info { gap:8px; }
+  .project-arrow { width:34px; height:34px; }
+  .value-sticker { max-width:calc(100% - 35px); overflow-wrap:break-word; }
+  .contact-aside h3 { font-size:clamp(33px,9vw,44px); }
+  .faq-list summary { min-width:0; }
+  .brief-actions .button { min-width:0; }
+  .back-top { right:14px; bottom:14px; }
+}
+@media(max-width:359px) {
+  .container { width:calc(100% - 28px); }
+  .brand { font-size:19px; }
+  .brand-mark { width:29px; height:29px; }
+  .hero h1 { font-size:35px; }
+  .hero-actions { gap:9px; }
+  .hero-bottom { letter-spacing:.06em; }
+  .ticker-inner > span { font-size:10px; }
+  .ticker-inner b { margin-inline:5px; }
+  .service-card h3 { font-size:32px; }
+  .project-info strong { font-size:21px; }
+  .project-dialog-body { padding:20px; }
+}
+
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
